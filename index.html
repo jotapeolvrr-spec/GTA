@@ -180,6 +180,27 @@ body.done #obrigado{display:block}
 .offer small{display:block;text-align:center;margin-top:10px;color:var(--mu);font-size:13px}
 .ended{display:none;margin-top:18px;font-family:var(--mono);color:#ff8fa3}
 
+
+/* Plano */
+.pt{font-size:clamp(28px,8vw,40px);margin-top:46px}
+.cal{list-style:none;display:grid;gap:10px;margin-top:18px}
+.cal li{display:flex;gap:14px;background:var(--c1);border:1px solid var(--bd);border-radius:14px;padding:16px 18px;color:#DADAE0;font-size:16px}
+.cal li .mono{color:var(--org);min-width:58px;padding-top:3px}
+.cal b{display:block;color:#fff}
+.msgs{display:grid;gap:12px;margin-top:18px}
+.msg{background:var(--c1);border:1px solid var(--bd);border-radius:14px;padding:18px;margin-top:18px}
+.msgs .msg{margin-top:0}
+.msg .mono{color:var(--org)}
+.mt{margin-top:10px;background:var(--c2);border-radius:10px;padding:14px;font-weight:500}
+.ex2{margin-top:10px;color:var(--mu);font-size:15px}
+.cp{margin-top:12px;width:100%;min-height:48px;border:0;border-radius:10px;background:var(--org);color:var(--ink);font-weight:800;font-size:15px;cursor:pointer;font-family:inherit}
+.cp.ok{background:#fff}
+.score{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+.score div{background:var(--c1);border:1px solid var(--bd);border-radius:14px;padding:16px 12px}
+.score b{font-family:var(--hd);font-weight:400;font-size:34px;color:var(--org);line-height:1}
+.score span{display:block;font-weight:700;margin-top:6px}
+.score p{font-size:13px;color:var(--mu);margin-top:4px}
+
 /* Revelar */
 .js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -212,7 +233,7 @@ body.done #obrigado{display:block}
     <div class="obj mono"><b>OBJETIVO:</b><span>Encher a fila antes de abrir a venda</span></div>
     <h1 class="ab">O GTA VI vendeu antes de existir. <span class="o">Seu negócio</span> também pode.</h1>
     <p class="lead">Pegue grátis o plano de pré-venda em 14 dias e crie fila de cliente antes de abrir a sua venda. Ainda dá tempo de aplicar na Black Friday.</p>
-    <div class="ctas"><a class="btn pulse" href="#form">Quero o plano grátis</a></div>
+    <div class="ctas"><a class="btn pulse" href="#plano">Ver o plano grátis</a></div>
   </div>
 </header>
 
@@ -294,30 +315,48 @@ body.done #obrigado{display:block}
   </div>
 </section>
 
-<!-- ============ 7. FORMULÁRIO ============ -->
-<section id="form" aria-labelledby="form-t">
+<!-- ============ 7. PLANO ============ -->
+<section id="plano" aria-labelledby="plano-t">
   <div class="wrap">
-    <p class="mono tagline rv">// Liberar acesso</p>
-    <h2 id="form-t" class="rv" style="margin-top:10px">Pegue o plano <span class="o">grátis</span></h2>
-    <form class="formbox rv" id="lead" novalidate>
-      <div class="fld">
-        <label for="nome">Seu nome</label>
-        <input id="nome" name="nome" type="text" autocomplete="given-name" required aria-describedby="e-nome">
-        <p class="err" id="e-nome">Digite seu nome pra gente saber como te chamar.</p>
-      </div>
-      <div class="fld">
-        <label for="whats">WhatsApp</label>
-        <input id="whats" name="whatsapp" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="(92) 99999-9999" required aria-describedby="e-whats">
-        <p class="err" id="e-whats">Confere o número: precisa ter DDD + 8 ou 9 dígitos.</p>
-      </div>
-      <div class="fld">
-        <label for="negocio">Qual é o seu negócio?</label>
-        <input id="negocio" name="negocio" type="text" maxlength="60" placeholder="Ex.: clínica de estética, loja de roupas" required aria-describedby="e-neg">
-        <p class="err" id="e-neg">Conta em poucas palavras o que você vende.</p>
-      </div>
-      <button class="btn pulse" type="submit" id="send">Liberar meu plano</button>
-      <p class="privacy">Seus dados ficam seguros.</p>
-    </form>
+    <p class="mono tagline rv">// Missão liberada</p>
+    <h2 id="plano-t" class="ab rv" style="margin-top:10px">O plano <span class="o">completo</span>. Comece hoje.</h2>
+    <p class="lead rv">Uma ação por dia. Siga na ordem e no dia 14 você abre a venda com gente esperando.</p>
+
+    <h3 class="pt rv"><span class="o">Fase 01</span> · Calendário de 14 dias</h3>
+    <ol class="cal">
+      <li class="rv"><span class="mono">Dia 01</span><div><b>Anuncie que vem novidade</b>Story: "Tô preparando uma condição especial pra [data]. Só quem estiver na lista vai saber primeiro."</div></li>
+      <li class="rv"><span class="mono">Dia 02</span><div><b>Mostre o problema</b>Post sobre a dor que seu produto ou serviço resolve. Termine com: "Semana que vem eu conto a solução."</div></li>
+      <li class="rv"><span class="mono">Dia 03</span><div><b>Abra a lista</b>Stories com link ou "comenta EU" pra entrar na lista VIP do WhatsApp. Use a Mensagem 1 com quem entrar.</div></li>
+      <li class="rv"><span class="mono">Dia 04</span><div><b>Bastidores</b>Mostre você preparando a oferta: estoque, agenda, embalagem, atendimento.</div></li>
+      <li class="rv"><span class="mono">Dia 05</span><div><b>Prova</b>Poste um depoimento ou um antes e depois de cliente.</div></li>
+      <li class="rv"><span class="mono">Dia 06</span><div><b>Lembre da lista</b>Stories: "Já tem X pessoas na lista. Ainda dá tempo de entrar."</div></li>
+      <li class="rv"><span class="mono">Dia 07</span><div><b>Responda dúvidas</b>Caixinha de perguntas. Responda as objeções mais comuns (preço, prazo, como funciona).</div></li>
+      <li class="rv"><span class="mono">Dia 08</span><div><b>Dê uma pista</b>Revele uma parte da oferta (ex.: "vai ter brinde"), sem dizer o preço.</div></li>
+      <li class="rv"><span class="mono">Dia 09</span><div><b>Mais prova</b>Novo depoimento, print de conversa com cliente ou resultado.</div></li>
+      <li class="rv"><span class="mono">Dia 10</span><div><b>Escassez real</b>Mostre o limite: quantidade, vagas ou horários disponíveis.</div></li>
+      <li class="rv"><span class="mono">Dia 11</span><div><b>Contagem regressiva</b>"Faltam 3 dias." Use a figurinha de contagem nos stories.</div></li>
+      <li class="rv"><span class="mono">Dia 12</span><div><b>Última chamada pra lista</b>Quem não entrar na lista não recebe a condição primeiro.</div></li>
+      <li class="rv"><span class="mono">Dia 13</span><div><b>Abre amanhã</b>Envie a Mensagem 2 pra lista e poste nos stories.</div></li>
+      <li class="rv"><span class="mono">Dia 14</span><div><b>Abriu</b>Envie a oferta pra lista primeiro. Uma hora depois, poste pra todo mundo. À noite, envie a Mensagem 3.</div></li>
+    </ol>
+
+    <h3 class="pt rv"><span class="o">Fase 02</span> · Mensagens de WhatsApp</h3>
+    <div class="msgs">
+      <div class="msg rv"><p class="mono">Mensagem 1 · Convite pra lista</p><p class="mt">Oi! Você entrou na lista VIP. Dia [data] vou liberar uma condição especial de [produto/serviço] e você vai ser a primeira pessoa a saber. Fica de olho aqui. 👀</p><button class="cp" type="button">Copiar mensagem</button></div>
+      <div class="msg rv"><p class="mono">Mensagem 2 · Abre amanhã</p><p class="mt">Amanhã às [hora] eu abro a condição especial. Como você tá na lista, vai receber antes de todo mundo. São só [quantidade] disponíveis, então se quiser garantir, responde "QUERO" que eu te chamo primeiro.</p><button class="cp" type="button">Copiar mensagem</button></div>
+      <div class="msg rv"><p class="mono">Mensagem 3 · Último aviso</p><p class="mt">Último aviso: a condição de [produto/serviço] acaba hoje às [hora]. Depois disso volta ao preço normal. Se quiser garantir, me chama aqui agora.</p><button class="cp" type="button">Copiar mensagem</button></div>
+    </div>
+
+    <h3 class="pt rv"><span class="o">Fase 03</span> · Modelo de oferta clara</h3>
+    <div class="msg rv"><p class="mono">Preencha os 4 itens</p><p class="mt">[O quê] para [quem] por [quanto], só até [quando].</p><p class="ex2"><b>Ex.:</b> Limpeza de pele + máscara de LED para quem quer pele limpa no fim de ano, por R$ 149, só até 29/11.</p></div>
+
+    <h3 class="pt rv"><span class="o">Fase 04</span> · Placar da lista</h3>
+    <div class="score rv">
+      <div><b>01</b><span>Entraram</span><p>Quantas pessoas entraram na lista</p></div>
+      <div><b>02</b><span>Abriram</span><p>Quantas leram a mensagem de abertura</p></div>
+      <div><b>03</b><span>Compraram</span><p>Quantas fecharam com você</p></div>
+    </div>
+    <p class="lead rv" style="font-size:16px">Anote os 3 números. Compraram ÷ Entraram = sua taxa de conversão. Na próxima venda, você já sabe quantas pessoas precisa na lista pra bater sua meta.</p>
   </div>
 </section>
 
@@ -326,7 +365,7 @@ body.done #obrigado{display:block}
   <div class="wrap">
     <h2 id="faq-t" class="rv">Perguntas <span class="o">frequentes</span></h2>
     <div style="margin-top:22px">
-      <details class="rv"><summary>É grátis mesmo?</summary><p>Sim. Você preenche o formulário e recebe o plano completo na hora, sem pagar nada.</p></details>
+      <details class="rv"><summary>É grátis mesmo?</summary><p>Sim. O plano completo está nesta página, sem cadastro e sem pagar nada.</p></details>
       <details class="rv"><summary>Serve para o meu negócio?</summary><p>Serve para quem vende produto ou serviço e quer ter clientes esperando antes de abrir uma venda, como uma promoção, um lançamento ou a Black Friday.</p></details>
       <details class="rv"><summary>Quanto tempo leva?</summary><p>O plano tem 14 dias, com uma ação por dia. Se você começar hoje, ainda aplica a tempo da Black Friday (27/11).</p></details>
       <details class="rv"><summary>Preciso investir em anúncio?</summary><p>Não é obrigatório. O plano funciona com seus posts e seu WhatsApp. Anúncio ajuda a encher a lista mais rápido, se você quiser acelerar.</p></details>
@@ -335,78 +374,24 @@ body.done #obrigado{display:block}
 </section>
 </main>
 
-<!-- ============ PÁGINA DE OBRIGADO ============ -->
-<section id="obrigado" class="ty" aria-labelledby="ty-t" tabindex="-1">
-  <div class="wrap">
-    <p class="mono ok">✓ Missão desbloqueada</p>
-    <h1 id="ty-t" class="ab">Seu plano está <span class="o">liberado</span>, <span id="ty-nome">empresário</span>.</h1>
-    <p class="lead">Abriu uma conversa comigo no WhatsApp. É só enviar a mensagem que eu te mando o plano por lá.</p>
-    <a class="btn dl pulse" id="dl" href="#" target="_blank" rel="noopener">Abrir o WhatsApp de novo</a>
-
-  </div>
-</section>
 
 <footer>
   <p><a href="https://instagram.com/jotapeolvr" rel="noopener">@jotapeolvr</a> · High Media</p>
 </footer>
 
 <script>
-/* ===== CONFIGURAÇÃO ===== */
-var WHATSAPP = "353831843036";
-/* ======================== */
 (function(){
   var d=document; d.documentElement.classList.add('js');
-  var set=function(v){ return v && v.indexOf('[')!==0; };
 
-  /* UTMs */
-  var utm={};
-  try{
-    var q=new URLSearchParams(location.search);
-    ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){ if(q.get(k)) utm[k]=q.get(k); });
-    if(Object.keys(utm).length) sessionStorage.setItem('utm_pv',JSON.stringify(utm)); else utm=JSON.parse(sessionStorage.getItem('utm_pv')||'{}');
-  }catch(e){}
-
-  /* Máscara de WhatsApp (BR) */
-  var w=d.getElementById('whats');
-  w.addEventListener('input',function(){
-    var v=w.value.replace(/\D/g,'').replace(/^55(?=\d{10,11}$)/,'').slice(0,11), o='';
-    if(v.length>0) o='('+v.slice(0,2);
-    if(v.length>=3) o+=') '+(v.length===11?v.slice(2,7)+(v.length>7?'-'+v.slice(7):''):v.slice(2,6)+(v.length>6?'-'+v.slice(6):''));
-    w.value=o;
+  /* Copiar mensagens */
+  d.querySelectorAll('.cp').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.parentNode.querySelector('.mt').textContent;
+      var ok=function(){ b.textContent='Copiado ✓'; b.classList.add('ok'); setTimeout(function(){ b.textContent='Copiar mensagem'; b.classList.remove('ok'); },2000); };
+      var fb=function(){ var x=d.createElement('textarea'); x.value=t; x.style.position='fixed'; x.style.opacity='0'; d.body.appendChild(x); x.select(); try{ d.execCommand('copy'); ok(); }catch(e){} d.body.removeChild(x); };
+      if(navigator.clipboard&&window.isSecureContext) navigator.clipboard.writeText(t).then(ok,fb); else fb();
+    });
   });
-
-  /* Validação + envio */
-  var f=d.getElementById('lead'), btn=d.getElementById('send');
-  function check(el,ok,err){ el.setAttribute('aria-invalid',!ok); d.getElementById(err).classList.toggle('show',!ok); return ok; }
-  f.addEventListener('submit',function(e){
-    e.preventDefault();
-    var nome=d.getElementById('nome'), neg=d.getElementById('negocio'), digits=w.value.replace(/\D/g,'');
-    var a=check(nome,nome.value.trim().length>=2,'e-nome');
-    var b=check(w,digits.length===10||digits.length===11,'e-whats');
-    var c=check(neg,neg.value.trim().length>=2,'e-neg');
-    if(!(a&&b&&c)){ (a?(b?neg:w):nome).focus(); return; }
-
-    btn.disabled=true; btn.textContent='Liberando...';
-    var data={nome:nome.value.trim(),whatsapp:'55'+digits,negocio:neg.value.trim(),origem:'GTA VI - pre-venda 14 dias',pagina:location.href.split('?')[0],data:new Date().toISOString()};
-    for(var k in utm) data[k]=utm[k];
-
-    var msg='Oi João Paulo! Quero o plano de pré-venda em 14 dias. Meu nome é '+data.nome+' e meu negócio é: '+data.negocio+'.';
-    var wa='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(msg);
-    d.getElementById('dl').href=wa;
-    window.open(wa,'_blank');
-    setTimeout(function(){ showThanks(data.nome); },300);
-  });
-
-  /* Obrigado */
-  var shown=false;
-  function showThanks(nome){
-    if(shown) return; shown=true;
-    d.getElementById('ty-nome').textContent=nome.split(' ')[0];
-    d.body.classList.add('done'); scrollTo(0,0);
-    var t=d.getElementById('obrigado'); t.focus({preventScroll:true});
-    try{ history.replaceState(null,'',location.pathname+location.search+'#obrigado'); }catch(e){}
-  }
-
 
   /* Revelar ao rolar */
   if('IntersectionObserver' in window){
