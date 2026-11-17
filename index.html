@@ -10,23 +10,8 @@
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="Plano de pré-venda em 14 dias: a fila vem antes da venda">
 <meta property="og:description" content="Calendário de 14 dias, 3 mensagens de WhatsApp prontas, modelo de oferta e placar da lista. Grátis.">
-<meta property="og:image" content="https://[SEU_DOMINIO]/og-pre-venda.png">
-<meta property="og:url" content="https://[SEU_DOMINIO]/pre-venda">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 
-<!-- META PIXEL: troque [PIXEL_ID] -->
-<script>
-var PIXEL_ID="[PIXEL_ID]";
-if(PIXEL_ID.indexOf("[")!==0){
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init',PIXEL_ID);fbq('track','PageView');}
-</script>
-<!-- GA4: troque [GA4_ID] (ex.: G-XXXXXXX) -->
-<script>
-var GA4_ID="[GA4_ID]";
-window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
-if(GA4_ID.indexOf("[")!==0){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id='+GA4_ID;document.head.appendChild(g);gtag('js',new Date());gtag('config',GA4_ID);}
-</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,7 +121,7 @@ h2{font-size:clamp(36px,10vw,58px)}
 
 /* Autor */
 .author{display:grid;gap:22px;align-items:center;margin-top:28px}
-@media(min-width:640px){.author{grid-template-columns:200px 1fr}}
+@media(min-width:640px){.author{grid-template-columns:1fr}}
 .photo{width:180px;aspect-ratio:4/5;border-radius:14px;border:1px solid var(--bd);background:linear-gradient(160deg,#241226,#121216);display:grid;place-content:center;text-align:center;position:relative;overflow:hidden}
 .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .photo span{font-family:var(--mono);font-size:11px;color:var(--mu);padding:0 14px}
@@ -294,10 +279,6 @@ body.done #obrigado{display:block}
   <div class="wrap">
     <p class="mono tagline rv">// Quem montou o plano</p>
     <div class="author">
-      <div class="photo rv">
-        <!-- FOTO: troque o <span> por <img src="joao-paulo.webp" alt="Foto de João Paulo" width="360" height="450" loading="lazy"> -->
-        <span>[ Sua foto aqui ]</span>
-      </div>
       <div class="rv">
         <h2 id="jp-t" style="font-size:clamp(38px,10vw,54px)">João <span class="o">Paulo</span></h2>
         <p class="mono" style="color:var(--mu);margin-top:6px">@jotapeolvr · Manaus · 23 anos</p>
@@ -335,7 +316,7 @@ body.done #obrigado{display:block}
         <p class="err" id="e-neg">Conta em poucas palavras o que você vende.</p>
       </div>
       <button class="btn pulse" type="submit" id="send">Liberar meu plano</button>
-      <p class="privacy">Seus dados ficam seguros. <a href="[URL_POLITICA_DE_PRIVACIDADE]">Política de privacidade</a></p>
+      <p class="privacy">Seus dados ficam seguros.</p>
     </form>
   </div>
 </section>
@@ -359,36 +340,19 @@ body.done #obrigado{display:block}
   <div class="wrap">
     <p class="mono ok">✓ Missão desbloqueada</p>
     <h1 id="ty-t" class="ab">Seu plano está <span class="o">liberado</span>, <span id="ty-nome">empresário</span>.</h1>
-    <p class="lead">Baixe agora e comece pela Fase 01 ainda hoje.</p>
-    <a class="btn dl pulse" id="dl" href="[LINK DO PLANO]" target="_blank" rel="noopener">Baixar meu plano</a>
+    <p class="lead">Abriu uma conversa comigo no WhatsApp. É só enviar a mensagem que eu te mando o plano por lá.</p>
+    <a class="btn dl pulse" id="dl" href="#" target="_blank" rel="noopener">Abrir o WhatsApp de novo</a>
 
-    <div class="offer">
-      <p class="mono" style="color:var(--org)">// Próxima fase</p>
-      <h2>A fila está pronta. Agora traga <span class="o">cliente novo</span> pra ela.</h2>
-      <p class="lead" style="font-size:17px">O método de tráfego para prestador de serviço mostra como atrair clientes da sua cidade todos os dias pelo WhatsApp.</p>
-      <div class="price"><s>De R$ 697,90</s><b>R$ 27</b></div>
-      <p class="mono" style="color:var(--mu);margin-top:6px">Condição válida até 29/11/2026, 23h59 (horário de Manaus)</p>
-      <div class="cd" id="cd" aria-live="off">
-        <div><b id="cd-d">0</b><span>DIAS</span></div>
-        <div><b id="cd-h">00</b><span>HORAS</span></div>
-        <div><b id="cd-m">00</b><span>MIN</span></div>
-        <div><b id="cd-s">00</b><span>SEG</span></div>
-      </div>
-      <a class="btn" id="metodo" href="[LINK DO MÉTODO]" target="_blank" rel="noopener">Quero o método por R$ 27</a>
-      <p class="ended" id="ended">Essa condição terminou em 29/11/2026.</p>
-      <small>Pagamento seguro. Acesso imediato.</small>
-    </div>
   </div>
 </section>
 
 <footer>
   <p><a href="https://instagram.com/jotapeolvr" rel="noopener">@jotapeolvr</a> · High Media</p>
-  <p><a href="[URL_POLITICA_DE_PRIVACIDADE]">Política de privacidade</a></p>
 </footer>
 
 <script>
 /* ===== CONFIGURAÇÃO ===== */
-var WEBHOOK_URL = "[URL DO WEBHOOK]"; // Make, n8n ou CRM
+var WHATSAPP = "353831843036";
 /* ======================== */
 (function(){
   var d=document; d.documentElement.classList.add('js');
@@ -426,15 +390,11 @@ var WEBHOOK_URL = "[URL DO WEBHOOK]"; // Make, n8n ou CRM
     var data={nome:nome.value.trim(),whatsapp:'55'+digits,negocio:neg.value.trim(),origem:'GTA VI - pre-venda 14 dias',pagina:location.href.split('?')[0],data:new Date().toISOString()};
     for(var k in utm) data[k]=utm[k];
 
-    if(typeof fbq==='function') fbq('track','Lead',{content_name:'Plano de pre-venda 14 dias'});
-    gtag('event','generate_lead',{form:'pre_venda_14_dias'});
-
-    var done=function(){ showThanks(data.nome); };
-    if(set(WEBHOOK_URL)){
-      fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data),keepalive:true})
-        .then(done,done); /* mesmo se o webhook falhar, a pessoa recebe o plano */
-      setTimeout(done,4000);
-    } else { setTimeout(done,400); }
+    var msg='Oi João Paulo! Quero o plano de pré-venda em 14 dias. Meu nome é '+data.nome+' e meu negócio é: '+data.negocio+'.';
+    var wa='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(msg);
+    d.getElementById('dl').href=wa;
+    window.open(wa,'_blank');
+    setTimeout(function(){ showThanks(data.nome); },300);
   });
 
   /* Obrigado */
@@ -445,28 +405,8 @@ var WEBHOOK_URL = "[URL DO WEBHOOK]"; // Make, n8n ou CRM
     d.body.classList.add('done'); scrollTo(0,0);
     var t=d.getElementById('obrigado'); t.focus({preventScroll:true});
     try{ history.replaceState(null,'',location.pathname+location.search+'#obrigado'); }catch(e){}
-    if(typeof fbq==='function') fbq('track','ViewContent',{content_name:'Obrigado - plano pre-venda'});
-    gtag('event','page_view',{page_title:'Obrigado - plano pre-venda',page_location:location.href});
-    countdown();
   }
 
-  /* Contador até 29/11/2026 23h59 (Manaus, UTC-4) */
-  function countdown(){
-    var end=new Date('2026-11-29T23:59:00-04:00').getTime(), p=function(n){return (n<10?'0':'')+n;};
-    (function tick(){
-      var s=Math.floor((end-Date.now())/1000);
-      if(s<=0){
-        ['d','h','m','s'].forEach(function(k){ d.getElementById('cd-'+k).textContent=k==='d'?'0':'00'; });
-        var m=d.getElementById('metodo'); m.removeAttribute('href'); m.setAttribute('aria-disabled','true'); m.style.opacity='.4'; m.style.pointerEvents='none';
-        d.getElementById('ended').style.display='block'; return;
-      }
-      d.getElementById('cd-d').textContent=Math.floor(s/86400);
-      d.getElementById('cd-h').textContent=p(Math.floor(s/3600)%24);
-      d.getElementById('cd-m').textContent=p(Math.floor(s/60)%60);
-      d.getElementById('cd-s').textContent=p(s%60);
-      setTimeout(tick,1000);
-    })();
-  }
 
   /* Revelar ao rolar */
   if('IntersectionObserver' in window){
