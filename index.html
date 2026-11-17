@@ -213,6 +213,21 @@ body.done #obrigado{display:block}
 .v.ok{color:#fff;background:rgba(255,90,31,.14);border-radius:5px;padding:0 3px}
 .dt{display:block;font-style:normal;color:var(--mu);font-size:11px;margin-top:4px;letter-spacing:.06em}
 
+
+.tut{margin-top:28px;border:1px solid var(--bd);border-radius:18px;background:linear-gradient(160deg,#1a0f1c,#121216 60%);padding:20px 18px;position:relative;overflow:hidden}
+.tut:before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--mag),var(--org))}
+.tut-h{display:flex;justify-content:space-between;align-items:center}
+.tut-h .mono{color:var(--org);font-weight:700}
+.tut-h .tut-t{color:var(--mu);font-weight:500}
+.tsteps{list-style:none;display:grid;gap:14px;margin-top:16px;counter-reset:t}
+.tsteps li{display:flex;gap:14px;align-items:flex-start}
+.key{flex-shrink:0;width:42px;height:42px;border-radius:50%;display:grid;place-content:center;font-family:var(--hd);font-size:20px;color:var(--ink);background:linear-gradient(135deg,var(--mag),var(--org));box-shadow:0 0 18px rgba(255,90,31,.45),inset 0 -3px 0 rgba(0,0,0,.25)}
+.tsteps b{display:block;font-size:17px}
+.tsteps p{color:#C9C9D1;font-size:15px;margin-top:2px}
+.tsteps li+li{position:relative}
+.tut-tip{margin-top:18px;display:flex;gap:10px;align-items:center;background:var(--bg);border:1px dashed rgba(255,90,31,.5);border-radius:12px;padding:12px 14px;font-size:14px;color:#DADAE0}
+.tut-tip .mono{color:var(--org);font-weight:700}
+
 /* Revelar */
 .js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -295,17 +310,6 @@ body.done #obrigado{display:block}
   </div>
 </section>
 
-<!-- ============ 5. PARA QUEM ============ -->
-<section aria-labelledby="quem-t" style="padding-top:20px">
-  <div class="wrap">
-    <p class="mono tagline rv">// Antes de pegar</p>
-    <h2 id="quem-t" class="rv" style="margin-top:10px">Esse plano é <span class="o">pra você</span>?</h2>
-    <div class="who">
-      <div class="yes rv"><h3>É para</h3><ul><li>Dono de negócio que quer vender mais</li><li>Prestador de serviço que hoje depende de indicação</li><li>Quem abre promoção e quer gente esperando</li></ul></div>
-      <div class="no rv"><h3>Não é para</h3><ul><li>Quem quer "ganhar dinheiro fácil na internet"</li><li>Quem procura fórmula mágica sem aplicar</li></ul></div>
-    </div>
-  </div>
-</section>
 
 <!-- ============ 6. QUEM É ============ -->
 <section aria-labelledby="jp-t">
@@ -334,6 +338,16 @@ body.done #obrigado{display:block}
     <h2 id="plano-t" class="ab rv" style="margin-top:10px">Monte o <span class="o">seu</span> plano</h2>
     <p class="lead rv">Uma ação por dia. Siga na ordem e no dia 14 você abre a venda com gente esperando.</p>
 
+    <div class="tut rv">
+      <div class="tut-h"><span class="mono">▶ Tutorial</span><span class="mono tut-t">4 passos · 1 min</span></div>
+      <ol class="tsteps">
+        <li><span class="key">1</span><div><b>Preencha seu negócio</b><p>Digite o que vende, a condição e o dia de abrir a venda. O plano inteiro se ajusta na hora.</p></div></li>
+        <li><span class="key">2</span><div><b>Siga o calendário</b><p>Faça só a ação do dia. Cada dia já mostra a data certa pra você não se perder.</p></div></li>
+        <li><span class="key">3</span><div><b>Copie as mensagens</b><p>No dia 3, 13 e 14, toque em "Copiar mensagem" e envie pra sua lista no WhatsApp.</p></div></li>
+        <li><span class="key">4</span><div><b>Anote o placar</b><p>No fim, conte quem entrou, abriu e comprou. É assim que você sabe seus números.</p></div></li>
+      </ol>
+      <p class="tut-tip"><span class="mono">Dica</span>Salve esta página nos favoritos. O que você preencher fica guardado aqui.</p>
+    </div>
     <div class="gbox rv" id="gerador">
       <p class="mono" style="color:var(--org)">// Personalize em 30 segundos</p>
       <p class="gsub">Preencha e o plano inteiro se ajusta ao seu negócio na hora: calendário com datas, mensagens e oferta.</p>
