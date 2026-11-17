@@ -201,6 +201,18 @@ body.done #obrigado{display:block}
 .score span{display:block;font-weight:700;margin-top:6px}
 .score p{font-size:13px;color:var(--mu);margin-top:4px}
 
+
+.gbox{margin-top:28px;background:var(--c1);border-radius:18px;padding:22px 18px;position:relative;border:1px solid var(--org);box-shadow:0 0 40px rgba(255,90,31,.15)}
+.gsub{margin-top:8px;color:#DADAE0;font-size:16px}
+.gg{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.gf{display:block}.gf.full{grid-column:1/-1}
+.gf span{display:block;font-size:14px;font-weight:600;color:var(--mu);margin-bottom:6px}
+.gf input{width:100%;min-height:50px;background:var(--bg);border:1.5px solid var(--bd);border-radius:12px;padding:0 12px;color:#fff;font-size:16px;font-family:inherit;color-scheme:dark}
+.gf input:focus{outline:none;border-color:var(--org)}
+.v{color:var(--org);font-weight:700}
+.v.ok{color:#fff;background:rgba(255,90,31,.14);border-radius:5px;padding:0 3px}
+.dt{display:block;font-style:normal;color:var(--mu);font-size:11px;margin-top:4px;letter-spacing:.06em}
+
 /* Revelar */
 .js .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
 .js .rv.in{opacity:1;transform:none}
@@ -233,7 +245,7 @@ body.done #obrigado{display:block}
     <div class="obj mono"><b>OBJETIVO:</b><span>Encher a fila antes de abrir a venda</span></div>
     <h1 class="ab">O GTA VI vendeu antes de existir. <span class="o">Seu negócio</span> também pode.</h1>
     <p class="lead">Pegue grátis o plano de pré-venda em 14 dias e crie fila de cliente antes de abrir a sua venda. Ainda dá tempo de aplicar na Black Friday.</p>
-    <div class="ctas"><a class="btn pulse" href="#plano">Ver o plano grátis</a></div>
+    <div class="ctas"><a class="btn pulse" href="#gerador">Montar meu plano grátis</a></div>
   </div>
 </header>
 
@@ -319,36 +331,50 @@ body.done #obrigado{display:block}
 <section id="plano" aria-labelledby="plano-t">
   <div class="wrap">
     <p class="mono tagline rv">// Missão liberada</p>
-    <h2 id="plano-t" class="ab rv" style="margin-top:10px">O plano <span class="o">completo</span>. Comece hoje.</h2>
+    <h2 id="plano-t" class="ab rv" style="margin-top:10px">Monte o <span class="o">seu</span> plano</h2>
     <p class="lead rv">Uma ação por dia. Siga na ordem e no dia 14 você abre a venda com gente esperando.</p>
+
+    <div class="gbox rv" id="gerador">
+      <p class="mono" style="color:var(--org)">// Personalize em 30 segundos</p>
+      <p class="gsub">Preencha e o plano inteiro se ajusta ao seu negócio na hora: calendário com datas, mensagens e oferta.</p>
+      <div class="gg">
+        <label class="gf full"><span>O que você vende?</span><input data-in="prod" maxlength="60" placeholder="Ex.: limpeza de pele"></label>
+        <label class="gf full"><span>Pra quem?</span><input data-in="quem" maxlength="60" placeholder="Ex.: mulheres que querem pele limpa no fim de ano"></label>
+        <label class="gf full"><span>Qual a condição especial?</span><input data-in="oferta" maxlength="80" placeholder="Ex.: limpeza de pele + máscara de LED"></label>
+        <label class="gf"><span>Preço</span><input data-in="preco" maxlength="20" placeholder="Ex.: R$ 149"></label>
+        <label class="gf"><span>Quantidade</span><input data-in="qtd" maxlength="20" inputmode="numeric" placeholder="Ex.: 20 vagas"></label>
+        <label class="gf"><span>Dia de abrir a venda</span><input data-in="data" type="date"></label>
+        <label class="gf"><span>Horário</span><input data-in="hora" type="time"></label>
+      </div>
+    </div>
 
     <h3 class="pt rv"><span class="o">Fase 01</span> · Calendário de 14 dias</h3>
     <ol class="cal">
-      <li class="rv"><span class="mono">Dia 01</span><div><b>Anuncie que vem novidade</b>Story: "Tô preparando uma condição especial pra [data]. Só quem estiver na lista vai saber primeiro."</div></li>
-      <li class="rv"><span class="mono">Dia 02</span><div><b>Mostre o problema</b>Post sobre a dor que seu produto ou serviço resolve. Termine com: "Semana que vem eu conto a solução."</div></li>
-      <li class="rv"><span class="mono">Dia 03</span><div><b>Abra a lista</b>Stories com link ou "comenta EU" pra entrar na lista VIP do WhatsApp. Use a Mensagem 1 com quem entrar.</div></li>
-      <li class="rv"><span class="mono">Dia 04</span><div><b>Bastidores</b>Mostre você preparando a oferta: estoque, agenda, embalagem, atendimento.</div></li>
-      <li class="rv"><span class="mono">Dia 05</span><div><b>Prova</b>Poste um depoimento ou um antes e depois de cliente.</div></li>
-      <li class="rv"><span class="mono">Dia 06</span><div><b>Lembre da lista</b>Stories: "Já tem X pessoas na lista. Ainda dá tempo de entrar."</div></li>
-      <li class="rv"><span class="mono">Dia 07</span><div><b>Responda dúvidas</b>Caixinha de perguntas. Responda as objeções mais comuns (preço, prazo, como funciona).</div></li>
-      <li class="rv"><span class="mono">Dia 08</span><div><b>Dê uma pista</b>Revele uma parte da oferta (ex.: "vai ter brinde"), sem dizer o preço.</div></li>
-      <li class="rv"><span class="mono">Dia 09</span><div><b>Mais prova</b>Novo depoimento, print de conversa com cliente ou resultado.</div></li>
-      <li class="rv"><span class="mono">Dia 10</span><div><b>Escassez real</b>Mostre o limite: quantidade, vagas ou horários disponíveis.</div></li>
-      <li class="rv"><span class="mono">Dia 11</span><div><b>Contagem regressiva</b>"Faltam 3 dias." Use a figurinha de contagem nos stories.</div></li>
-      <li class="rv"><span class="mono">Dia 12</span><div><b>Última chamada pra lista</b>Quem não entrar na lista não recebe a condição primeiro.</div></li>
-      <li class="rv"><span class="mono">Dia 13</span><div><b>Abre amanhã</b>Envie a Mensagem 2 pra lista e poste nos stories.</div></li>
-      <li class="rv"><span class="mono">Dia 14</span><div><b>Abriu</b>Envie a oferta pra lista primeiro. Uma hora depois, poste pra todo mundo. À noite, envie a Mensagem 3.</div></li>
+      <li class="rv"><span class="mono">Dia 01<em class="dt" data-d="1"></em></span><div><b>Anuncie que vem novidade</b>Story: "Tô preparando uma condição especial pra <span class="v" data-k="data"></span>. Só quem estiver na lista vai saber primeiro."</div></li>
+      <li class="rv"><span class="mono">Dia 02<em class="dt" data-d="2"></em></span><div><b>Mostre o problema</b>Post sobre a dor que seu produto ou serviço resolve. Termine com: "Semana que vem eu conto a solução."</div></li>
+      <li class="rv"><span class="mono">Dia 03<em class="dt" data-d="3"></em></span><div><b>Abra a lista</b>Stories com link ou "comenta EU" pra entrar na lista VIP do WhatsApp. Use a Mensagem 1 com quem entrar.</div></li>
+      <li class="rv"><span class="mono">Dia 04<em class="dt" data-d="4"></em></span><div><b>Bastidores</b>Mostre você preparando a oferta: estoque, agenda, embalagem, atendimento.</div></li>
+      <li class="rv"><span class="mono">Dia 05<em class="dt" data-d="5"></em></span><div><b>Prova</b>Poste um depoimento ou um antes e depois de cliente.</div></li>
+      <li class="rv"><span class="mono">Dia 06<em class="dt" data-d="6"></em></span><div><b>Lembre da lista</b>Stories: "Já tem X pessoas na lista. Ainda dá tempo de entrar."</div></li>
+      <li class="rv"><span class="mono">Dia 07<em class="dt" data-d="7"></em></span><div><b>Responda dúvidas</b>Caixinha de perguntas. Responda as objeções mais comuns (preço, prazo, como funciona).</div></li>
+      <li class="rv"><span class="mono">Dia 08<em class="dt" data-d="8"></em></span><div><b>Dê uma pista</b>Revele uma parte da oferta (ex.: "vai ter brinde"), sem dizer o preço.</div></li>
+      <li class="rv"><span class="mono">Dia 09<em class="dt" data-d="9"></em></span><div><b>Mais prova</b>Novo depoimento, print de conversa com cliente ou resultado.</div></li>
+      <li class="rv"><span class="mono">Dia 10<em class="dt" data-d="10"></em></span><div><b>Escassez real</b>Mostre o limite: quantidade, vagas ou horários disponíveis.</div></li>
+      <li class="rv"><span class="mono">Dia 11<em class="dt" data-d="11"></em></span><div><b>Contagem regressiva</b>"Faltam 3 dias." Use a figurinha de contagem nos stories.</div></li>
+      <li class="rv"><span class="mono">Dia 12<em class="dt" data-d="12"></em></span><div><b>Última chamada pra lista</b>Quem não entrar na lista não recebe a condição primeiro.</div></li>
+      <li class="rv"><span class="mono">Dia 13<em class="dt" data-d="13"></em></span><div><b>Abre amanhã</b>Envie a Mensagem 2 pra lista e poste nos stories.</div></li>
+      <li class="rv"><span class="mono">Dia 14<em class="dt" data-d="14"></em></span><div><b>Abriu</b>Envie a oferta pra lista primeiro. Uma hora depois, poste pra todo mundo. À noite, envie a Mensagem 3.</div></li>
     </ol>
 
     <h3 class="pt rv"><span class="o">Fase 02</span> · Mensagens de WhatsApp</h3>
     <div class="msgs">
-      <div class="msg rv"><p class="mono">Mensagem 1 · Convite pra lista</p><p class="mt">Oi! Você entrou na lista VIP. Dia [data] vou liberar uma condição especial de [produto/serviço] e você vai ser a primeira pessoa a saber. Fica de olho aqui. 👀</p><button class="cp" type="button">Copiar mensagem</button></div>
-      <div class="msg rv"><p class="mono">Mensagem 2 · Abre amanhã</p><p class="mt">Amanhã às [hora] eu abro a condição especial. Como você tá na lista, vai receber antes de todo mundo. São só [quantidade] disponíveis, então se quiser garantir, responde "QUERO" que eu te chamo primeiro.</p><button class="cp" type="button">Copiar mensagem</button></div>
-      <div class="msg rv"><p class="mono">Mensagem 3 · Último aviso</p><p class="mt">Último aviso: a condição de [produto/serviço] acaba hoje às [hora]. Depois disso volta ao preço normal. Se quiser garantir, me chama aqui agora.</p><button class="cp" type="button">Copiar mensagem</button></div>
+      <div class="msg rv"><p class="mono">Mensagem 1 · Convite pra lista</p><p class="mt">Oi! Você entrou na lista VIP. Dia <span class="v" data-k="data"></span> vou liberar uma condição especial de <span class="v" data-k="prod"></span> e você vai ser a primeira pessoa a saber. Fica de olho aqui. 👀</p><button class="cp" type="button">Copiar mensagem</button></div>
+      <div class="msg rv"><p class="mono">Mensagem 2 · Abre amanhã</p><p class="mt">Amanhã às <span class="v" data-k="hora"></span> eu abro a condição especial. Como você tá na lista, vai receber antes de todo mundo. São só <span class="v" data-k="qtd"></span> disponíveis, então se quiser garantir, responde "QUERO" que eu te chamo primeiro.</p><button class="cp" type="button">Copiar mensagem</button></div>
+      <div class="msg rv"><p class="mono">Mensagem 3 · Último aviso</p><p class="mt">Último aviso: a condição de <span class="v" data-k="prod"></span> acaba hoje às <span class="v" data-k="hora"></span>. Depois disso volta ao preço normal. Se quiser garantir, me chama aqui agora.</p><button class="cp" type="button">Copiar mensagem</button></div>
     </div>
 
     <h3 class="pt rv"><span class="o">Fase 03</span> · Modelo de oferta clara</h3>
-    <div class="msg rv"><p class="mono">Preencha os 4 itens</p><p class="mt">[O quê] para [quem] por [quanto], só até [quando].</p><p class="ex2"><b>Ex.:</b> Limpeza de pele + máscara de LED para quem quer pele limpa no fim de ano, por R$ 149, só até 29/11.</p></div>
+    <div class="msg rv"><p class="mono">Preencha os 4 itens</p><p class="mt"><span class="v" data-k="oferta"></span> para <span class="v" data-k="quem"></span> por <span class="v" data-k="preco"></span>, só até <span class="v" data-k="data"></span>.</p><p class="ex2"><b>Ex.:</b> Limpeza de pele + máscara de LED para quem quer pele limpa no fim de ano, por R$ 149, só até 29/11.</p></div>
 
     <h3 class="pt rv"><span class="o">Fase 04</span> · Placar da lista</h3>
     <div class="score rv">
@@ -382,6 +408,25 @@ body.done #obrigado{display:block}
 <script>
 (function(){
   var d=document; d.documentElement.classList.add('js');
+
+  /* Personalizar */
+  var PH={prod:'[produto/serviço]',quem:'[quem]',oferta:'[o quê]',preco:'[quanto]',qtd:'[quantidade]',data:'[data]',hora:'[hora]'};
+  var V={}, ins=d.querySelectorAll('[data-in]');
+  function fmtData(v){ var p=v.split('-'); return p[2]+'/'+p[1]; }
+  function paint(){
+    ins.forEach(function(i){ var v=i.value.trim(); if(i.type==='date'&&v) v=fmtData(v); if(i.type==='time'&&v) v=v.replace(':00','h').replace(':','h'); V[i.dataset.in]=v; });
+    d.querySelectorAll('.v').forEach(function(s){ var v=V[s.dataset.k]; s.textContent=v||PH[s.dataset.k]; s.classList.toggle('ok',!!v); });
+    var raw=d.querySelector('[data-in="data"]').value;
+    d.querySelectorAll('.dt').forEach(function(e){
+      if(!raw){ e.textContent=''; return; }
+      var p=raw.split('-'), dt=new Date(+p[0],+p[1]-1,+p[2]-(14-+e.dataset.d));
+      e.textContent=('0'+dt.getDate()).slice(-2)+'/'+('0'+(dt.getMonth()+1)).slice(-2);
+    });
+    try{ var o={}; ins.forEach(function(i){ o[i.dataset.in]=i.value; }); localStorage.setItem('pv_plano',JSON.stringify(o)); }catch(e){}
+  }
+  try{ var sv=JSON.parse(localStorage.getItem('pv_plano')||'{}'); ins.forEach(function(i){ if(sv[i.dataset.in]) i.value=sv[i.dataset.in]; }); }catch(e){}
+  ins.forEach(function(i){ i.addEventListener('input',paint); i.addEventListener('change',paint); });
+  paint();
 
   /* Copiar mensagens */
   d.querySelectorAll('.cp').forEach(function(b){
